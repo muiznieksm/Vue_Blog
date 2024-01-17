@@ -11,14 +11,13 @@ const getPosts = () => {
         throw Error("no available data");
       }
       posts.value = await data.json();
-      console.log(posts.value);
     } catch (err) {
       error.value = err.message;
       console.log(error.value);
     }
   };
-  
-  return {posts, error, load}
+
+  return { posts, error, load };
 };
 
-export default getPosts
+export default getPosts;
