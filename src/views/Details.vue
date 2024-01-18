@@ -4,24 +4,38 @@
     <h3>{{ post.title }}</h3>
     <p class="pre">{{ post.body }}</p>
     <span v-for="tag in post.tags" class="pill">#{{ tag }}</span>
+    <button @click="handleDelete">Delete</button>
   </div>
-  <div v-else><Spiner /></div>
+  <div v-else><Spinner /></div>
 </template>
 
 <script>
-import getPost from "../composable/getPost";
-import Spiner from "../components/Spiner.vue";
-import { useRoute } from "vue-router";
+import getPost from "../composables/getPost";
+import Spinner from '../components/Spinner.vue'
+import { useRoute, useRouter } from "vue-router";
 
 export default {
   props: ["id"],
-  components: { Spiner },
+  components: { Spinner },
   setup(props) {
+    const router = useRouter();
     const route = useRoute();
 
     const { post, error, load } = getPost(route.params.id);
     load();
-    return { post, error };
+
+const handleDelete = (post) => {
+fetch(`http://localhost:3000/posts/${route.params.id}`, {
+  method: 'DELETE',
+  headers: {'Content-Type': 'application/json'},
+  body: JSON.stringify(post)
+})
+  .then(router.push('/'))
+  .catch(error => console.log(error))
+}
+
+
+    return { post, error, handleDelete};
   },
 };
 </script>

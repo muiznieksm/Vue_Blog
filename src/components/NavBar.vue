@@ -1,6 +1,6 @@
 <template>
   <header>
-    <h1>Blog page</h1>
+    <h1>Tech Blog page</h1>
     <nav>
       <router-link :to="{ name: 'Home' }">Home</router-link> |
       <router-link :to="{ name: 'Create' }">Create Post</router-link>

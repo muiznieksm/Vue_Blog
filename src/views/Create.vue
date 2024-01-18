@@ -49,9 +49,6 @@ export default {
         console.log(error);
       }
       router.push({name: 'Home'})
-      title.value = "";
-      body.value = "";
-      tags.value = "";
     };
 
     return { body, title, tags, tag, handleKeydown, handleSubmit };

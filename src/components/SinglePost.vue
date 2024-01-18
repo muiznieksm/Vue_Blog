@@ -28,7 +28,7 @@ export default {
 .post {
   margin: 0 40px 30px;
   padding-bottom: 30px;
-  border-bottom: 1px dashed #e7e7e7;
+  border-bottom: 1px dashed #4448;
 }
 .post h3 {
   display: inline-block;
