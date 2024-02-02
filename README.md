@@ -49,4 +49,4 @@ npm run build
 ```
 
 ## Preview
-<img src="Preview.gif" alt="Preview GIF" style="max-width: 100%; height: auto; border: 2px solid #333;">
+<img src="preview.gif" alt="Preview GIF" style="max-width: 100%; height: auto; border: 2px solid #333;">
