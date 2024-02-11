@@ -5,6 +5,9 @@
 
 This Vue.js blog application offers a platform for users to read, post, and manage blog posts. It leverages Vue 3, Vue Router for navigation, and `json-server` as a mock backend for development purposes.
 
+## Preview
+<img src="preview.gif" alt="Preview GIF" style="max-width: 100%; height: auto; border: 2px solid #333;">
+
 ## Technologies Used
 
 - **Vue.js 3**: The progressive JavaScript framework used for building user interfaces. [Vue.js Documentation](https://vuejs.org/)
@@ -48,5 +51,4 @@ To create a production build, use:
 npm run build
 ```
 
-## Preview
-<img src="preview.gif" alt="Preview GIF" style="max-width: 100%; height: auto; border: 2px solid #333;">
+
